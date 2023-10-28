@@ -1,11 +1,13 @@
 ﻿using BAExpense.Data;
 using BAExpense.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System.Diagnostics;
 
 namespace BAExpense.Controllers
 {
+    [Authorize]
     public class ExpenseController : Controller
     {
         private readonly ExpenseDbContext db;
